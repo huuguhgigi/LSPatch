@@ -45,7 +45,7 @@ androidComponents.onVariants { variant ->
         from(
             fileTree(
                 "dir" to "$buildDir/intermediates/stripped_native_libs/$libDir/out/lib",
-                "include" to listOf("**/liblspatch.so")
+                "include" to listOf("**/liblspatch1.so")
             )
         )
         into("${rootProject.projectDir}/out/assets/${variant.name}/lspatch/so")
