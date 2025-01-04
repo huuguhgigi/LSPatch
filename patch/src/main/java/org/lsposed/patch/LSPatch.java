@@ -294,7 +294,7 @@ public class LSPatch {
                 // copy so and dex files into the unzipped apk
                 // do not put liblspatch.so into apk!lib because x86 native bridge causes crash
                 for (String arch : ARCHES) {
-                    String entryName = "assets/lspatch/so/" + arch + "/liblspatch.so";
+                    String entryName = "assets/lspatch/so/" + arch + "/liblspatch1.so";
                     try (var is = getClass().getClassLoader().getResourceAsStream(entryName)) {
                         dstZFile.add(entryName, is, false); // no compress for so
                     } catch (Throwable e) {
